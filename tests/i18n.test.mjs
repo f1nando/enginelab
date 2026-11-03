@@ -2,6 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { getLanguage, getLocale, setLanguage, t } from '../src/i18n.ts';
 
+test('English is the default interface language before a saved selection',()=>{
+  assert.equal(getLanguage(),'en');
+});
+
 test('Ukrainian and English translate labels, units, status and help', () => {
   for (const [language, power, rpm, idle, locale] of [
     ['uk', 'Потужність', 'об/хв', 'Холостий хід', 'uk-UA'],

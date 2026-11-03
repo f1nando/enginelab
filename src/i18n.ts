@@ -134,7 +134,7 @@ const messages: Record<string, readonly [string, string]> = {
   '2 ротора · Turbo': ['2 rotors · Turbo', '2 ротори · Turbo'],
 };
 
-let language: Language = 'uk';
+let language: Language = 'en';
 try {
   const saved = localStorage.getItem('enginelab-language');
   if (saved === 'en' || saved === 'uk') language = saved;

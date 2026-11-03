@@ -412,7 +412,6 @@ function frame(now: number) {
 }
 function applyLanguage() {
   document.documentElement.lang = getLanguage();
-  document.querySelector('meta[name="description"]')?.setAttribute('content', getLanguage() === 'en' ? 'enginelab — educational engine test stand.' : 'enginelab — навчальний стенд двигунів.');
   $<HTMLSelectElement>('#language-select').value = getLanguage();
   translateStatic();
   renderEngineSpecs();
